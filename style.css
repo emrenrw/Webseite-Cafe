@@ -1,0 +1,259 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #f7efe5;
+    color: #3d2b1f;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+.seitenkopf {
+    background-color: #4b2e20;
+    color: white;
+    padding: 16px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo-bereich {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.logo-bereich img {
+    width: 58px;
+    height: 58px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #e8b56a;
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navigation a:hover {
+    color: #e8b56a;
+    text-decoration: underline;
+}
+
+.hero {
+    min-height: 450px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero > img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    filter: brightness(55%);
+}
+
+.hero-text {
+    position: absolute;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero-text h1 {
+    margin: 0 0 10px;
+    font-size: 3.2rem;
+}
+
+.hero-text p {
+    font-size: 1.3rem;
+    margin-bottom: 28px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #c77b30;
+    color: white;
+    padding: 12px 22px;
+    border: 2px solid #a85e20;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #8f4c1e;
+    transform: scale(1.03);
+}
+
+.inhalt {
+    max-width: 1100px;
+    margin: 45px auto;
+    padding: 30px;
+    background-color: #fffaf4;
+    border: 1px solid #dfc5aa;
+    border-radius: 12px;
+}
+
+h2 {
+    color: #6b3d25;
+    font-size: 2rem;
+    border-bottom: 2px solid #d49a5b;
+    padding-bottom: 8px;
+}
+
+h3 {
+    color: #6b3d25;
+    font-size: 1.3rem;
+}
+
+.zweispaltig {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.zweispaltig > div,
+.zweispaltig > img {
+    flex: 1;
+}
+
+.zweispaltig img,
+.kartenbild {
+    max-width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #d49a5b;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    background-color: white;
+}
+
+caption {
+    margin-bottom: 10px;
+    color: #6b3d25;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+th,
+td {
+    border: 1px solid #c8a889;
+    padding: 13px;
+    text-align: left;
+}
+
+th {
+    background-color: #6b3d25;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f4e4d2;
+}
+
+.angebote-liste,
+ol {
+    padding-left: 28px;
+}
+
+.angebote-liste li,
+ol li {
+    margin-bottom: 8px;
+}
+
+.kontakt-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.kontakt-grid > div {
+    padding: 18px;
+    background-color: #f4e4d2;
+    border: 1px solid #d2ad88;
+    border-radius: 8px;
+}
+
+.kontakt a:not(.button) {
+    color: #8f4c1e;
+    font-weight: bold;
+}
+
+.kontakt a:not(.button):hover {
+    color: #c15d18;
+}
+
+footer {
+    background-color: #4b2e20;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 45px;
+}
+
+@media (max-width: 750px) {
+    .seitenkopf {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .navigation {
+        justify-content: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .zweispaltig {
+        flex-direction: column;
+    }
+
+    .kontakt-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .inhalt {
+        margin: 25px 12px;
+        padding: 20px;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+}
